@@ -1,0 +1,5 @@
+valgrind --tool=massif ./main
+ms_print massif.out.xxx
+valgrind --leak-check=full --log-file=memlog ./main
+valgrind --leak-check=full --show-leak-kinds=reachable ./main
+
